@@ -30,10 +30,9 @@ router.post('/api/user/register', function(req, res) {
 					password: hash
 				}
 				userList.push(user);
+				res.json(user);
 			})
 		})
-		res.json("User registered");
-		console.log(userList);
 	}
 });
 
